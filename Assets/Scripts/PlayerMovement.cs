@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public float lastHorizontalVector;
     [HideInInspector]
+    public Vector2 MoveDirRaw;
     public Vector2 MoveDir;
 
     private void Start()
@@ -34,9 +35,10 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        MoveDir = new Vector2(moveX, moveY).normalized;
+        MoveDir = new Vector2(moveX, moveY);
+        MoveDirRaw = MoveDir.normalized;
 
-        if(MoveDir.x != 0)
+        if (MoveDir.x != 0)
         {
             lastHorizontalVector = MoveDir.x;
         }
@@ -49,6 +51,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        _rb.velocity = new Vector2(MoveDir.x * moveSpeed, MoveDir.y * moveSpeed);
+        _rb.velocity = new Vector2(MoveDirRaw.x * moveSpeed, MoveDirRaw.y * moveSpeed);
     }
 }
