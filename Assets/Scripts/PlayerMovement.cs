@@ -8,6 +8,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _rb;
     
     [HideInInspector]
+    public float lastVerticalVector;
+    [HideInInspector]
+    public float lastHorizontalVector;
+    [HideInInspector]
     public Vector2 MoveDir;
 
     private void Start()
@@ -31,6 +35,16 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
 
         MoveDir = new Vector2(moveX, moveY).normalized;
+
+        if(MoveDir.x != 0)
+        {
+            lastHorizontalVector = MoveDir.x;
+        }
+
+        if(MoveDir.y != 0)
+        {
+            lastVerticalVector = MoveDir.y;
+        }
     }
 
     private void Move()
