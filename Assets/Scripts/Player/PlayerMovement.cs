@@ -14,10 +14,13 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public Vector2 MoveDirRaw;
     public Vector2 MoveDir;
+    [HideInInspector]
+    public Vector2 lastMovedVector;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        lastMovedVector = Vector2.right;
     }
 
     private void Update()
@@ -41,11 +44,18 @@ public class PlayerMovement : MonoBehaviour
         if (MoveDir.x != 0)
         {
             lastHorizontalVector = MoveDir.x;
+            lastMovedVector = new Vector2(lastHorizontalVector, 0f);
         }
 
         if(MoveDir.y != 0)
         {
             lastVerticalVector = MoveDir.y;
+            lastMovedVector = new Vector2(0f, lastVerticalVector);
+        }
+
+        if(MoveDir.x != 0 && MoveDir.y != 0)
+        {
+            lastMovedVector = new Vector2(lastHorizontalVector, lastVerticalVector);
         }
     }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MapController : MonoBehaviour
@@ -91,18 +92,19 @@ public class MapController : MonoBehaviour
     {
         while(!StopChunkOptimizer)
         {
-            foreach (var chunk in spawnedChunks)
-            {
-                opDist = Vector3.Distance(Player.transform.position, chunk.transform.position);
+            // Get active chunks that far away
+            var farActiveChunks = spawnedChunks.Where(chunk => Vector3.Distance(Player.transform.position, chunk.transform.position) >= maxOpDist && chunk.activeSelf == true);
+            // Get passive chunks that near
+            var nearPassiveChunks = spawnedChunks.Where(chunk => Vector3.Distance(Player.transform.position, chunk.transform.position) < maxOpDist && chunk.activeSelf == false);
 
-                if (opDist > maxOpDist)
-                {
-                    chunk.SetActive(false);
-                }
-                else
-                {
-                    chunk.SetActive(true);
-                }
+            foreach(var nearChunk in nearPassiveChunks)
+            {
+                nearChunk.SetActive(true);
+            }
+
+            foreach (var farChunk in farActiveChunks)
+            {
+                farChunk.SetActive(false);
             }
 
             yield return new WaitForSeconds(OptimizerCooldown);
