@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Base script of all projectile beahaviours
+/// Base script of all projectile weapon beahaviours
 /// </summary>
 
 public class ProjectileWeaponBehaviour : MonoBehaviour

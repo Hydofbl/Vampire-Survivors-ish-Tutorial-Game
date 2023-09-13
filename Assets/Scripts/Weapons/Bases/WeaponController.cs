@@ -6,7 +6,7 @@ using UnityEngine;
 /// Base script of all weapon controllers
 /// </summary>
 
-public class WeaponContoller : MonoBehaviour
+public class WeaponController : MonoBehaviour
 {
     [Header("Weapon Stats")]
     public GameObject weaponPrefab;

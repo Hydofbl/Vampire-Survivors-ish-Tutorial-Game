@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StoneController : WeaponContoller
+public class StoneController : WeaponController
 {
     protected override void Start()
     {

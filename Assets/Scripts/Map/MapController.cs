@@ -32,6 +32,8 @@ public class MapController : MonoBehaviour
     {
         _playerMovement = Player.gameObject.GetComponent<PlayerMovement>();
         StartCoroutine(ChunkOptimizer());
+
+        SpawnChunk(Player.transform.position);
     }
 
     void Update()
