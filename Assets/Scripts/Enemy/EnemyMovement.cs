@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
-{ 
-    [SerializeField] private float movementSpeed;
+{
+    public EnemyScriptableObject EnemyData;
 
     private Transform _playerTransform;  
     private SpriteRenderer _spriteRenderer;
@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         _lastPosition = transform.position;
-        transform.position = Vector2.MoveTowards(transform.position, _playerTransform.position, movementSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, _playerTransform.position, EnemyData.MovementSpeed * Time.deltaTime);
 
         // Moving to the right or stoping
         if((_lastPosition - transform.position).normalized.x <= 0)
