@@ -10,16 +10,18 @@ public class EnemyMovement : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private Vector3 _lastPosition;
 
+    private Rigidbody2D _rb;
+
     void Start()
     {
         _playerTransform = FindObjectOfType<PlayerMovement>().transform;
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
         _lastPosition = transform.position;
-        transform.position = Vector2.MoveTowards(transform.position, _playerTransform.position, EnemyData.MovementSpeed * Time.deltaTime);
 
         // Moving to the right or stoping
         if((_lastPosition - transform.position).normalized.x <= 0)
@@ -31,5 +33,15 @@ public class EnemyMovement : MonoBehaviour
         {
             _spriteRenderer.flipX = true;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
+    void Move()
+    {
+        _rb.velocity = (_playerTransform.position - transform.position).normalized * EnemyData.MovementSpeed;
     }
 }

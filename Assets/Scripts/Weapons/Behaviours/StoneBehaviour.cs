@@ -13,6 +13,6 @@ public class StoneBehaviour : ProjectileWeaponBehaviour
 
     void Update()
     {
-        transform.position += direction * WeaponData.speed * Time.deltaTime;        
+        transform.position += direction * WeaponData.Speed * Time.deltaTime;        
     }
 }

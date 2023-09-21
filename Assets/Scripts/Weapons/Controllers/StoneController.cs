@@ -11,7 +11,7 @@ public class StoneController : WeaponController
     {
         base.Attack();
 
-        GameObject spawnedStone = Instantiate(WeaponData.weaponPrefab);
+        GameObject spawnedStone = Instantiate(WeaponData.WeaponPrefab);
         spawnedStone.transform.position = transform.position;
         spawnedStone.GetComponent<StoneBehaviour>().SetRawDirection(playerMovement.lastMovedVector);
         spawnedStone.GetComponent<StoneBehaviour>().DirectionChecker(playerMovement.MoveDir);

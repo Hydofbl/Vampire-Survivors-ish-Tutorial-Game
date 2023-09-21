@@ -23,7 +23,6 @@ public class MapController : MonoBehaviour
     private GameObject latestChunk;
 
     public float maxOpDist;
-    private float opDist;
 
     public bool StopChunkOptimizer;
     public float OptimizerCooldown;

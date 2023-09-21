@@ -12,6 +12,20 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
     protected Vector3 direction;
     public float destroyAfterSeconds;
 
+    // Current Stats
+    protected float currentDamage;
+    protected float currentSpeed;
+    protected float currentCooldownDuration;
+    protected int currentPierce;
+
+    private void Awake()
+    {
+        currentDamage = WeaponData.damage;
+        currentSpeed = WeaponData.speed;
+        currentCooldownDuration = WeaponData.cooldownDuration;
+        currentPierce = WeaponData.pierce;
+    }
+
     protected virtual void Start()
     {
         Destroy(gameObject, destroyAfterSeconds);
@@ -52,5 +66,36 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
 
         transform.localScale = scale;
         transform.rotation = Quaternion.Euler(rotation);
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        // Reference the script from the collided collider and deal damage using TakeDamage method by currentDamage
+        if (other.CompareTag("Enemy"))
+        {
+            if(other.TryGetComponent(out EnemyStats enemy))
+            {
+                enemy.TakeDamage(currentDamage);
+                ReducePierce();
+            }
+        }
+        else if (other.CompareTag("Prop"))
+        {
+            if (other.TryGetComponent(out BreakableProp prop))
+            {
+                prop.TakeDamage(currentDamage);
+                ReducePierce();
+            }
+        }
+    }
+
+    void ReducePierce()
+    {
+        currentPierce--;
+
+        if(currentPierce <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
