@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    public CharacterScriptableObject CharacterData;
-
     [HideInInspector]
     public float lastVerticalVector;
     [HideInInspector]
@@ -18,9 +15,11 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 lastMovedVector;
 
     private Rigidbody2D _rb;
+    private PlayerStats _playerStats;
 
     private void Start()
     {
+        _playerStats = GetComponent<PlayerStats>();
         _rb = GetComponent<Rigidbody2D>();
         lastMovedVector = Vector2.right;
     }
@@ -63,6 +62,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        _rb.velocity = new Vector2(MoveDirRaw.x * CharacterData.MovementSpeed, MoveDirRaw.y * CharacterData.MovementSpeed);
+        _rb.velocity = new Vector2(MoveDirRaw.x * _playerStats.CurrentMovementSpeed, MoveDirRaw.y * _playerStats.CurrentMovementSpeed);
     }
 }

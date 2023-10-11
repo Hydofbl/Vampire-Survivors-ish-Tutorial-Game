@@ -7,22 +7,25 @@ public class EnemyStats : MonoBehaviour
     public EnemyScriptableObject EnemyData;
 
     // CUrrent Stats
-    private float _currentMovementSpeed;
-    private float _currentHealth;
-    private float _currentDamage;
+    [HideInInspector]
+    public float CurrentMovementSpeed;
+    [HideInInspector]
+    public float CurrentHealth;
+    [HideInInspector]
+    public float CurrentDamage;
 
     void Awake()
     {
-        _currentMovementSpeed = EnemyData.MovementSpeed;
-        _currentHealth = EnemyData.MaxHealth;
-        _currentDamage = EnemyData.Damage;
+        CurrentMovementSpeed = EnemyData.MovementSpeed;
+        CurrentHealth = EnemyData.MaxHealth;
+        CurrentDamage = EnemyData.Damage;
     }
 
     public void TakeDamage(float damage)
     {
-        _currentHealth -= damage;
+        CurrentHealth -= damage;
 
-        if(_currentHealth <= 0)
+        if(CurrentHealth <= 0)
         {
             Kill();
         }
@@ -40,7 +43,7 @@ public class EnemyStats : MonoBehaviour
         {
             if(other.gameObject.TryGetComponent(out PlayerStats player))
             {
-                player.TakeDamage(_currentDamage);
+                player.TakeDamage(CurrentDamage);
             }
         }
     }

@@ -27,6 +27,7 @@ public class DropRateManager : MonoBehaviour
 
         List<Drop> possibleDrops = new List<Drop>();
 
+        // Checks for possible drops according to drops drop rate, then add them to possibleDrops list
         foreach (Drop drop in DropList)
         {
             if(randomNumber <= drop.DropRate)
@@ -35,6 +36,7 @@ public class DropRateManager : MonoBehaviour
             }
         }
 
+        // If there is more than 1 possible drops, then randomly select one of them and spawn it
         if(possibleDrops.Count > 0)
         {
             GameObject dropPrefab = possibleDrops[Random.Range(0, possibleDrops.Count)].ItemPrefab;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealingApple : MonoBehaviour, ICollectible
+public class HealingApple : Pickup, ICollectible
 {
     public int HealthToRestore;
 
@@ -11,6 +11,5 @@ public class HealingApple : MonoBehaviour, ICollectible
         // Keep trying to find player object for every gem is not good
         PlayerStats player = FindAnyObjectByType<PlayerStats>();
         player.RestoreHealth(HealthToRestore);
-        Destroy(gameObject);
     }
 }

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public EnemyScriptableObject EnemyData;
-
+    private EnemyStats _enemyStats;
     private Transform _playerTransform;  
     private SpriteRenderer _spriteRenderer;
     private Vector3 _lastPosition;
@@ -17,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
         _playerTransform = FindObjectOfType<PlayerMovement>().transform;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rb = GetComponent<Rigidbody2D>();
+        _enemyStats = GetComponent<EnemyStats>();
     }
 
     void Update()
@@ -42,6 +42,6 @@ public class EnemyMovement : MonoBehaviour
 
     void Move()
     {
-        _rb.velocity = (_playerTransform.position - transform.position).normalized * EnemyData.MovementSpeed;
+        _rb.velocity = (_playerTransform.position - transform.position).normalized * _enemyStats.CurrentMovementSpeed;
     }
 }
