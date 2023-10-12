@@ -21,9 +21,6 @@ public class PlayerStats : MonoBehaviour
     [HideInInspector]
     public float CurrentMagnet;
 
-    [Header("Spawned Weapons")]
-    public List<GameObject> SpawnedWeapons;
-
     // Experience and level of the player
     [Header("Experience/Level")]
     public int Experience = 0;
@@ -35,6 +32,16 @@ public class PlayerStats : MonoBehaviour
     private float _invincibilityTimer;
     private bool _isInvincible;
 
+    InventoryManager _inventoryManager;
+    public int WeaponId;
+    public int PassiveItemId;
+
+    public GameObject SecondWeaponTest;
+    public GameObject FirstPassiveItemTest, SecondPassiveItemTest;
+
+
+    public List<LevelRange> LevelRanges;
+
     // Class for defining a level range and the corresponding experience cap increase for that range   
     [System.Serializable]
     public class LevelRange
@@ -44,12 +51,12 @@ public class PlayerStats : MonoBehaviour
         public int ExperienceCapIncrease;
     }
 
-    public List<LevelRange> LevelRanges;
-
     private void Awake()
     {
         CharacterData = CharacterSelector.GetData();
         CharacterSelector.Instance.DestroySingleton();
+
+        _inventoryManager = GetComponent<InventoryManager>();
 
         // Variable assignments
         CurrentHealth = CharacterData.MaxHealth;
@@ -61,6 +68,9 @@ public class PlayerStats : MonoBehaviour
 
         // Spawn the starting weapon
         SpawnWeapon(CharacterData.StartingWeapon);
+        SpawnWeapon(SecondWeaponTest);
+        SpawnPassiveItem(FirstPassiveItemTest);
+        SpawnPassiveItem(SecondPassiveItemTest);
     }
 
     private void Start()
@@ -164,8 +174,31 @@ public class PlayerStats : MonoBehaviour
     // Spawns weapon's controllers
     public void SpawnWeapon(GameObject weapon)
     {
+        if(WeaponId >= _inventoryManager.WeaponSlots.Count - 1)
+        {
+            // slots already full
+            return;
+        }
+
         GameObject spawnedWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
         spawnedWeapon.transform.SetParent(transform, false);
-        SpawnedWeapons.Add(spawnedWeapon);
+        _inventoryManager.AddWeapon(WeaponId, spawnedWeapon.GetComponent<WeaponController>());
+
+        WeaponId++;
+    }
+
+    public void SpawnPassiveItem(GameObject passiveItem)
+    {
+        if (WeaponId >= _inventoryManager.PassiveItemSlots.Count - 1)
+        {
+            // slots already full
+            return;
+        }
+
+        GameObject spawnedPassiveItem = Instantiate(passiveItem, transform.position, Quaternion.identity);
+        spawnedPassiveItem.transform.SetParent(transform, false);
+        _inventoryManager.AddPassiveItem(PassiveItemId, spawnedPassiveItem.GetComponent<PassiveItem>());
+
+        PassiveItemId++;
     }
 }
