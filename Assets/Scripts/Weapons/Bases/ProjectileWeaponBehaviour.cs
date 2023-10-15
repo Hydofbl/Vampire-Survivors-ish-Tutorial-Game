@@ -20,10 +20,10 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        currentDamage = WeaponData.damage;
-        currentSpeed = WeaponData.speed;
-        currentCooldownDuration = WeaponData.cooldownDuration;
-        currentPierce = WeaponData.pierce;
+        currentDamage = WeaponData.Damage;
+        currentSpeed = WeaponData.Speed;
+        currentCooldownDuration = WeaponData.CooldownDuration;
+        currentPierce = WeaponData.Pierce;
     }
 
     public float GetCurrentDamage()

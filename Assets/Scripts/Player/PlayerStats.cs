@@ -27,19 +27,6 @@ public class PlayerStats : MonoBehaviour
     public int Level = 1;
     public int ExperienceCap;
 
-    [Header("I-Frames")]
-    public float InvincibilityDuration;
-    private float _invincibilityTimer;
-    private bool _isInvincible;
-
-    InventoryManager _inventoryManager;
-    public int WeaponId;
-    public int PassiveItemId;
-
-    public GameObject SecondWeaponTest;
-    public GameObject FirstPassiveItemTest, SecondPassiveItemTest;
-
-
     public List<LevelRange> LevelRanges;
 
     // Class for defining a level range and the corresponding experience cap increase for that range   
@@ -50,6 +37,18 @@ public class PlayerStats : MonoBehaviour
         public int MaxLevel;
         public int ExperienceCapIncrease;
     }
+
+    [Header("I-Frames")]
+    public float InvincibilityDuration;
+    private float _invincibilityTimer;
+    private bool _isInvincible;
+
+    private InventoryManager _inventoryManager;
+    [Header("Inventory")]
+    public int WeaponId;
+    public int PassiveItemId;
+    public GameObject SecondWeaponTest;
+    public GameObject FirstPassiveItemTest, SecondPassiveItemTest;
 
     private void Awake()
     {
@@ -174,6 +173,7 @@ public class PlayerStats : MonoBehaviour
     // Spawns weapon's controllers
     public void SpawnWeapon(GameObject weapon)
     {
+        // Starts from 0
         if(WeaponId >= _inventoryManager.WeaponSlots.Count - 1)
         {
             // slots already full
@@ -189,7 +189,8 @@ public class PlayerStats : MonoBehaviour
 
     public void SpawnPassiveItem(GameObject passiveItem)
     {
-        if (WeaponId >= _inventoryManager.PassiveItemSlots.Count - 1)
+        // Starts from 0
+        if (PassiveItemId >= _inventoryManager.PassiveItemSlots.Count - 1)
         {
             // slots already full
             return;

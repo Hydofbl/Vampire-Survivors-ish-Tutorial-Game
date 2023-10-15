@@ -4,23 +4,38 @@ using UnityEngine;
 public class WeaponScriptableObject : ScriptableObject
 {
     [SerializeField]
-    private GameObject weaponPrefab;
+    GameObject weaponPrefab;
     public GameObject WeaponPrefab { get => weaponPrefab; private set => weaponPrefab = value; }
 
     // Base stats for weapons
     [SerializeField]
-    public float damage;
+    float damage;
     public float Damage { get => damage; private set => damage = value; }
 
     [SerializeField]
-    public float speed;
+    float speed;
     public float Speed { get => speed; private set => speed = value; }
 
     [SerializeField]
-    public float cooldownDuration;
+    float cooldownDuration;
     public float CooldownDuration { get => cooldownDuration; private set => cooldownDuration = value; }
 
     [SerializeField]
-    public int pierce;
+    int pierce;
     public int Pierce { get => pierce; private set => pierce = value; }
+
+    [SerializeField]
+    int level;
+
+    public int Level { get => level; private set => level = value; }
+
+    [SerializeField]
+    GameObject nextLevelPrefab;
+
+    public GameObject NextLevelPrefab { get => nextLevelPrefab; private set => nextLevelPrefab = value;}
+
+    [SerializeField]
+    Sprite icon;
+
+    public Sprite Icon { get => icon; private set => icon = value; }
 }
