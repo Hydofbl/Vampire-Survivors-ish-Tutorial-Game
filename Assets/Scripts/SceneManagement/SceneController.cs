@@ -38,10 +38,11 @@ public class SceneController : MonoBehaviour
 
     public IEnumerator MakeTransition(string sceneName)
     {
-        UIManager.Instance.StartTransition();
+        //UIManager.Instance.StartTransition();
 
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
+        Time.timeScale = 1f;
     }
 }

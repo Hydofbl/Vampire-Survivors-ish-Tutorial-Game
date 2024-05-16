@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ad579fcbd242745aa4f42b39e3fb76, type: 3}
   m_Name: Stone Character
   m_EditorClassIdentifier: 
+  icon: {fileID: -1932418998, guid: 0fce19d1a759a1b4ab745dec88dd9f28, type: 3}
+  name: Stone Character
   startingWeapon: {fileID: 4263689952243139601, guid: 19a62c9220affc64f9ad0f140c220f71, type: 3}
   maxHealth: 1000
   recovery: 1

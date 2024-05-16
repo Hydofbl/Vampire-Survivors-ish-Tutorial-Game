@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d38ea474c6b2e141912127c7c427f6d
+guid: 9bbf5f4d7c773854ebdde3fef7208b31
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OuzSpriteSheet_0
+      name: Garlic_Laser_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86421838748fabf42a329f7ac5f29c8d
-      internalID: -11776847
+      spriteID: 9fbf43899cc876049b047716b27dd526
+      internalID: 64675370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OuzSpriteSheet_1
+      name: Garlic_Laser_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bbefe78f15abd94cbf0000ee1930309
-      internalID: -72159064
+      spriteID: 8de650695df644d4c87dc27979a3144f
+      internalID: -1633867626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OuzSpriteSheet_2
+      name: Garlic_Laser_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 15
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3c8119454d298a40b518f57ad5904e9
-      internalID: 794352000
+      spriteID: 65f8a86c3ed72664fa50332cbcb75e31
+      internalID: -1239241995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OuzSpriteSheet_3
+      name: Garlic_Laser_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
-        width: 15
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c91b81fdb974c349add401e746efa43
-      internalID: 1733126827
+      spriteID: 963337cf84839124c893b8d84ab5b32a
+      internalID: 1071627093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OuzSpriteSheet_4
+      name: Garlic_Laser_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 15
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbe68ab08a290e446890c34d2dafe012
-      internalID: -1118789139
+      spriteID: 7a1647f44e557864d8b1b015a8e64425
+      internalID: 90584204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OuzSpriteSheet_5
+      name: Garlic_Laser_5
       rect:
         serializedVersion: 2
         x: 80
         y: 0
-        width: 15
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ab368c17763458448de6ade727b8b60
-      internalID: 1992996469
+      spriteID: 24d7e355997f9464ebcfe8048b6fbc91
+      internalID: 1067516989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OuzSpriteSheet_6
+      name: Garlic_Laser_6
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 0
-        width: 15
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12f7e19cc24eabc4ea3ba730c531b1c2
-      internalID: 293825819
+      spriteID: 82483dc93b50546439491a76f216fde1
+      internalID: 2103418451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OuzSpriteSheet_7
+      name: Garlic_Laser_7
       rect:
         serializedVersion: 2
-        x: 113
+        x: 112
         y: 0
-        width: 15
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b4cfc171c884334ba0df937e5e35385
-      internalID: 889126310
+      spriteID: b83768d9429330747a1d65fdf9150460
+      internalID: -1910168969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OuzSpriteSheet_8
+      name: Garlic_Laser_8
       rect:
         serializedVersion: 2
-        x: 129
+        x: 128
         y: 0
-        width: 15
-        height: 16
+        width: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,8 +305,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e427ddbbf7f93e4d941a03492303e2e
-      internalID: -1094776277
+      spriteID: 1275c46ef07606a46beee59b97d62d2c
+      internalID: -709676827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garlic_Laser_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3be8dd509348c4bab2da3345bad18f
+      internalID: -236948757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garlic_Laser_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e86d3cbc2f60e7442b486b7acb5172df
+      internalID: -1119483342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garlic_Laser_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a229c2de9b50364bb8efcfb82b21a14
+      internalID: -1735528326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garlic_Laser_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ee98d5652a0044d8fe799ad07be548
+      internalID: -976866576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garlic_Laser_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dd48f676260aa429f5d1eed9172e02
+      internalID: 47100872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Garlic_Laser_14
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d28de0a47674f5c4c96e53fef7a0d622
+      internalID: 1167916477
       vertices: []
       indices: 
       edges: []
@@ -322,19 +448,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FloatingEyeIdleFront_0: 2131071784
-      FloatingEyeIdleFront_1: 1676933577
-      FloatingEyeIdleFront_2: 718327901
-      FloatingEyeIdleFront_3: -2040885951
-      OuzSpriteSheet_0: -1399494608
-      OuzSpriteSheet_1: -1835945041
-      OuzSpriteSheet_2: -801745751
-      OuzSpriteSheet_3: -11776847
-      OuzSpriteSheet_4: -72159064
-      OuzSpriteSheet_5: 794352000
-      OuzSpriteSheet_6: 1733126827
-      OuzSpriteSheet_7: -1118789139
-      OuzSpriteSheet_8: 1992996469
+      Garlic_Laser_0: 64675370
+      Garlic_Laser_1: -1633867626
+      Garlic_Laser_10: -1119483342
+      Garlic_Laser_11: -1735528326
+      Garlic_Laser_12: -976866576
+      Garlic_Laser_13: 47100872
+      Garlic_Laser_14: 1167916477
+      Garlic_Laser_2: -1239241995
+      Garlic_Laser_3: 1071627093
+      Garlic_Laser_4: 90584204
+      Garlic_Laser_5: 1067516989
+      Garlic_Laser_6: 2103418451
+      Garlic_Laser_7: -1910168969
+      Garlic_Laser_8: -709676827
+      Garlic_Laser_9: -236948757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

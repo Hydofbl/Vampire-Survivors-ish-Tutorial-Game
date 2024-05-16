@@ -21,17 +21,15 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        _lastPosition = transform.position;
-
-        // Moving to the right or stoping
-        if((_lastPosition - transform.position).normalized.x <= 0)
-        {
-            _spriteRenderer.flipX = false;
-        }
-        // Moving to the left
-        else
+        // On the right side of the player
+        if ((_playerTransform.position - transform.position).normalized.x <= 0)
         {
             _spriteRenderer.flipX = true;
+        }
+        // On the left side of the player
+        else
+        {
+            _spriteRenderer.flipX = false;
         }
     }
 

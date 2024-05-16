@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c5be8911e8ebfc4390a420361b7b60f, type: 3}
-  m_Name: Stone Weapon Level 2
+  m_Name: Garlic Weapon Level 3
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 5286397856897929419, guid: dae42ddfb92e30e40993bb56048ba2f9, type: 3}
-  damage: 8
-  speed: 15
-  cooldownDuration: 2
-  pierce: 1
-  level: 2
+  weaponPrefab: {fileID: 2984071067461590563, guid: 891da5e09d602d7408f36a2d43a15548, type: 3}
+  damage: 15
+  speed: 0
+  cooldownDuration: 2.5
+  pierce: 0
+  level: 3
   nextLevelPrefab: {fileID: 0}
-  name: Stone Lv.2
-  description: Damage and Pierce improved.
-  icon: {fileID: -309813550, guid: 8d38c5dfcac102f4a9146c1db6e09230, type: 3}
+  name: Garlic Lv.3
+  description: Damage and Cooldown improved.
+  icon: {fileID: 21300000, guid: b85ea9aea3e0d0e40ade0abd85e3e3d6, type: 3}

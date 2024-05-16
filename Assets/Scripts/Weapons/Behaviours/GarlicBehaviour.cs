@@ -14,7 +14,7 @@ public class GarlicBehaviour : MeleeWeaponBehaviour
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Prop"))
+        if (other.CompareTag("Enemy"))
         {
             if (!_markedEnemies.Contains(other.gameObject) && other.TryGetComponent(out EnemyStats enemy))
             {

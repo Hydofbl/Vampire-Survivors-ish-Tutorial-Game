@@ -52,8 +52,8 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         // Change scale
         // if any direction value is zero then multiply that scale with 1,
         // else multiply that scale with direction value
+        // Note: scale.y did not neccessary
         scale.x *= dirX == 0 ? 1 : dirX;
-        scale.y *= dirY == 0 ? 1 : dirY;
 
         // if direction is diagonal
         if (dirX != 0 && dirY != 0)
@@ -66,11 +66,11 @@ public class ProjectileWeaponBehaviour : MonoBehaviour
         if(dirX == 0 && dirY != 0)
         {
             // Rotate
-            rotation.z += 90f;
+            rotation.z += dirY * 90f;
         }
 
-        transform.localScale = scale;
         transform.rotation = Quaternion.Euler(rotation);
+        transform.localScale = scale;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
